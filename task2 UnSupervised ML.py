@@ -11,7 +11,7 @@ samples=iris.iloc[:,[1,2,3,4]].values
 print(samples)
 optimum_set = []
 for k in range(1,9):
-    model = KMeans(n_clusters=k )
+    model = KMeans(n_clusters=k)
     model.fit(samples)
     optimum_set.append(model.inertia_)
 # print(optimum_set)
@@ -22,8 +22,4 @@ plt.ylabel('inertia')
 plt.xticks(ks)
 plt.show()
 print(optimum_set)
-
-model_opt=KMeans(n_clusters=3)
-model_opt.fit(samples)
-labels=model_opt.predict()
 
