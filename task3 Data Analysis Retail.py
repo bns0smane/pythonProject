@@ -14,8 +14,8 @@ data=data.drop_duplicates()
 print(data.keys())
 x=data['Profit']
 y=data['State']
-#SP=State & Profit
 
+#SP=State & Profit
 SP=data.groupby('State')['Profit'].sum()
 SP = SP.to_frame().reset_index()
 SP=SP.sort_values(by='Profit', ascending=True)

@@ -16,8 +16,5 @@ dt = DecisionTreeClassifier(criterion='gini',random_state=1)
 dt.fit(X_train,Y_train)
 Y_pred = dt.predict(X_test)
 accuracy_score(Y_test,Y_pred)
-plt.figure(figsize=(20,10))
-
 plot_tree(dt, rounded=True, filled=True)
 plt.show()
-print('done')
